@@ -1,0 +1,23 @@
+# UE generated
+Binaries/
+Intermediate/
+Saved/
+DerivedDataCache/
+
+# Plugins generated
+Plugins/*/Binaries/
+Plugins/*/Intermediate/
+
+# IDE
+.vs/
+.idea/
+*.sln
+*.suo
+*.user
+*.VC.db
+*.opensdf
+*.sdf
+
+# OS
+Thumbs.db
+.DS_Store
