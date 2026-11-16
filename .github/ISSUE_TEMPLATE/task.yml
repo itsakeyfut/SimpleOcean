@@ -1,0 +1,68 @@
+name: タスク
+description: 実装・設定などの作業タスク
+title: "[Task] "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: 何をするか（1〜3行）
+    validations:
+      required: true
+
+  - type: textarea
+    id: purpose
+    attributes:
+      label: 目的・背景
+      description: なぜ必要か。何が実現・解決されるか
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 対象領域
+      multiple: true
+      options:
+        - Runtime
+        - Editor
+        - Shader (HLSL)
+        - Material
+        - Infra (Git / Build)
+        - Docs
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: 作業内容
+      description: チェックリストで分解する
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: 完了条件
+      description: 何を確認できたら Close するか（客観的に判定できる形で）
+      value: |
+        - [ ] 
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 参考資料
+      description: ドキュメント、論文、エンジンのソースの場所など
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: メモ・ハマった点
+      description: 作業中・完了後に追記する（Notion やポートフォリオ記事の素材にする）

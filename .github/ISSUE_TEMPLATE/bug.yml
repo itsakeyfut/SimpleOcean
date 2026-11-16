@@ -1,0 +1,69 @@
+name: バグ報告
+description: 不具合・クラッシュ・表示崩れ
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: symptom
+    attributes:
+      label: 現象
+      description: 何が起きたか
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: 再現手順
+      value: |
+        1. 
+        2. 
+        3. 
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rhi
+    attributes:
+      label: RHI
+      options:
+        - DX12 (SM6)
+        - Vulkan (SM6)
+        - DX11 (SM5)
+        - その他
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: 環境
+      description: UEのバージョン / GPU / ドライバ / コミット
+      placeholder: "UE 5.7.x / RTX 3060 / 5xx.xx / abc1234"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: ログ・エラー
+      description: Output Log、クラッシュログ、シェーダーのコンパイルエラーなど
+      render: text
+
+  - type: textarea
+    id: media
+    attributes:
+      label: スクリーンショット・RenderDocキャプチャ
+      description: 画像を貼り付けるか、キャプチャファイルの場所を書く
+
+  - type: textarea
+    id: cause
+    attributes:
+      label: 原因と対応（解決後に追記）
