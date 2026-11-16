@@ -1,0 +1,51 @@
+name: 調査
+description: 論文・既存実装の調査、設計判断
+title: "[Research] "
+labels: ["research"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: 明らかにしたいこと
+      description: 調査の問いを1つに絞って書く
+      placeholder: "例: Stockham FFT を groupshared 1パスで実装できる最大の解像度は？"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: 背景
+      description: なぜ今この判断が必要か。どのタスクがこの調査を待っているか
+    validations:
+      required: true
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: 調べる資料
+      value: |
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
+
+  - type: input
+    id: timebox
+    attributes:
+      label: タイムボックス
+      description: 調査にかける時間の上限
+      placeholder: "例: 4h"
+    validations:
+      required: true
+
+  - type: textarea
+    id: findings
+    attributes:
+      label: 調査結果（完了時に追記）
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: 結論・決定事項（完了時に追記）
+      description: 何を採用し、何を採用しなかったか。その理由

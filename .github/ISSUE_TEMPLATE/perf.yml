@@ -1,0 +1,54 @@
+name: パフォーマンス
+description: 計測と最適化
+title: "[Perf] "
+labels: ["perf"]
+body:
+  - type: textarea
+    id: target
+    attributes:
+      label: 対象
+      description: どのパスや処理か
+      placeholder: "例: FFT 縦方向パス（512x512, 3カスケード）"
+    validations:
+      required: true
+
+  - type: textarea
+    id: conditions
+    attributes:
+      label: 計測条件
+      value: |
+        - GPU: 
+        - 解像度: 
+        - スケーラビリティ: 
+        - シーン/視点: 
+        - 計測方法: stat gpu / Unreal Insights / RenderDoc / PIX
+    validations:
+      required: true
+
+  - type: input
+    id: before
+    attributes:
+      label: 現状値
+      placeholder: "例: 0.82 ms"
+    validations:
+      required: true
+
+  - type: input
+    id: goal
+    attributes:
+      label: 目標値
+      placeholder: "例: 0.40 ms 以下"
+    validations:
+      required: true
+
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: 仮説・施策
+      description: ボトルネックの推定と、試すこと
+
+  - type: textarea
+    id: result
+    attributes:
+      label: 結果（完了時に追記）
+      description: 施策ごとの before / after
