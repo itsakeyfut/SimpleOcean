@@ -1,6 +1,5 @@
 name: パフォーマンス
 description: 計測と最適化
-title: "[Perf] "
 labels: ["perf"]
 body:
   - type: textarea
