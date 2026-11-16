@@ -1,6 +1,5 @@
 name: タスク
 description: 実装・設定などの作業タスク
-title: "[Task] "
 body:
   - type: textarea
     id: summary
@@ -14,22 +13,7 @@ body:
     id: purpose
     attributes:
       label: 目的・背景
-      description: なぜ必要か。何が実現・解決されるか
-    validations:
-      required: true
-
-  - type: dropdown
-    id: area
-    attributes:
-      label: 対象領域
-      multiple: true
-      options:
-        - Runtime
-        - Editor
-        - Shader (HLSL)
-        - Material
-        - Infra (Git / Build)
-        - Docs
+      description: なぜ必要か。何が実現・解決されるか。前提となる Issue があれば `Ref #番号` で書く
     validations:
       required: true
 
@@ -60,9 +44,3 @@ body:
     attributes:
       label: 参考資料
       description: ドキュメント、論文、エンジンのソースの場所など
-
-  - type: textarea
-    id: notes
-    attributes:
-      label: メモ・ハマった点
-      description: 作業中・完了後に追記する（Notion やポートフォリオ記事の素材にする）
